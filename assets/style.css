@@ -1,0 +1,112 @@
+/* piqMind — site vitrine. Couleurs reprises de l'app. */
+:root {
+  --bg: #0E0B18;
+  --card: #1F1B29;
+  --raised: #2A2533;
+  --line: rgba(255, 255, 255, 0.10);
+  --text: #FFFFFF;
+  --text-2: rgba(255, 255, 255, 0.72);
+  --text-3: rgba(255, 255, 255, 0.52);
+  --accent: #FFF7BA;
+  --accent-ink: #0D0B18;
+  --yellow: #FAD302;
+  --lavender: #8B7BC8;
+  --radius: 20px;
+  --max: 1040px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a { color: var(--accent); text-underline-offset: 3px; }
+a:hover { color: var(--yellow); }
+
+.wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+
+/* En-tête */
+.site-header { position: sticky; top: 0; z-index: 10; background: rgba(14, 11, 24, 0.85); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 64px; }
+.brand { display: inline-flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font-weight: 800; font-size: 20px; letter-spacing: -0.3px; }
+.brand img { width: 34px; height: 34px; border-radius: 9px; }
+.brand:hover { color: var(--accent); }
+.nav { display: flex; gap: 22px; }
+.nav a { color: var(--text-2); text-decoration: none; font-size: 15px; font-weight: 600; }
+.nav a:hover, .nav a[aria-current="page"] { color: var(--accent); }
+
+/* Accueil */
+.hero { padding: 72px 0 56px; text-align: center; }
+.hero .logo { width: 112px; height: 112px; border-radius: 26px; box-shadow: 0 0 80px rgba(250, 211, 2, 0.25); }
+.hero h1 { margin-top: 28px; font-size: clamp(36px, 7vw, 60px); line-height: 1.05; letter-spacing: -1.6px; font-weight: 800; text-wrap: balance; }
+.hero h1 em { font-style: normal; color: var(--accent); }
+.hero p.lead { margin: 20px auto 0; max-width: 600px; color: var(--text-2); font-size: clamp(17px, 2.6vw, 20px); text-wrap: pretty; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; margin-top: 32px; padding: 15px 26px; border-radius: 999px; background: var(--accent); color: var(--accent-ink); font-weight: 800; font-size: 17px; text-decoration: none; }
+.btn:hover { background: var(--yellow); color: var(--accent-ink); }
+.btn svg { width: 20px; height: 20px; }
+.soon { display: block; margin-top: 12px; color: var(--text-3); font-size: 14px; }
+
+.features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding: 24px 0 40px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; }
+.card .icon { font-size: 28px; line-height: 1; }
+.card h2, .card h3 { margin-top: 14px; font-size: 19px; letter-spacing: -0.2px; }
+.card p { margin-top: 8px; color: var(--text-2); font-size: 16px; }
+
+.premium { margin: 16px 0 72px; background: linear-gradient(135deg, #2A2533, #1F1B29); border: 1px solid rgba(255, 247, 186, 0.25); border-radius: 28px; padding: 36px; display: grid; grid-template-columns: 1.3fr 1fr; gap: 28px; align-items: center; }
+.premium h2 { font-size: clamp(26px, 4vw, 34px); letter-spacing: -0.8px; line-height: 1.15; }
+.premium p { margin-top: 12px; color: var(--text-2); }
+.premium ul { list-style: none; display: grid; gap: 10px; }
+.premium li { padding-left: 30px; position: relative; color: var(--text); }
+.premium li::before { content: "✓"; position: absolute; left: 0; top: 0; color: var(--yellow); font-weight: 800; }
+.price { display: inline-block; margin-top: 16px; padding: 6px 14px; border-radius: 999px; background: rgba(255, 247, 186, 0.12); color: var(--accent); font-weight: 700; font-size: 15px; }
+
+/* Pages de texte (confidentialité, conditions, support) */
+.doc { padding: 56px 0 72px; max-width: 760px; }
+.doc h1 { font-size: clamp(32px, 6vw, 44px); letter-spacing: -1px; line-height: 1.1; }
+.doc .updated { margin-top: 10px; color: var(--text-3); font-size: 15px; }
+.doc .intro { margin-top: 22px; color: var(--text-2); font-size: 18px; }
+.doc h2 { margin-top: 44px; font-size: 23px; letter-spacing: -0.3px; }
+.doc h3 { margin-top: 24px; font-size: 18px; }
+.doc p, .doc ul { margin-top: 12px; color: var(--text-2); }
+.doc ul { padding-left: 22px; }
+.doc li + li { margin-top: 6px; }
+.doc strong { color: var(--text); }
+.doc .box { margin-top: 20px; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 20px 22px; }
+.doc .box p:first-child { margin-top: 0; }
+
+details { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 18px 22px; margin-top: 12px; }
+details summary { cursor: pointer; font-weight: 700; color: var(--text); list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+details summary::-webkit-details-marker { display: none; }
+details summary::after { content: "+"; color: var(--accent); font-size: 22px; line-height: 1; }
+details[open] summary::after { content: "–"; }
+details p, details ol, details ul { margin-top: 12px; color: var(--text-2); }
+details ol, details ul { padding-left: 22px; }
+
+/* Pied de page */
+.site-footer { margin-top: auto; border-top: 1px solid var(--line); padding: 28px 0 36px; color: var(--text-3); font-size: 14px; }
+.site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 14px; }
+.site-footer nav { display: flex; flex-wrap: wrap; gap: 18px; }
+.site-footer a { color: var(--text-2); text-decoration: none; }
+.site-footer a:hover { color: var(--accent); }
+
+@media (max-width: 760px) {
+  body { font-size: 16px; }
+  .nav { gap: 14px; }
+  .nav a.hide-sm { display: none; }
+  .hero { padding: 48px 0 40px; }
+  .features { grid-template-columns: 1fr; }
+  .premium { grid-template-columns: 1fr; padding: 26px; margin-bottom: 48px; }
+  .doc { padding: 40px 0 56px; }
+}
