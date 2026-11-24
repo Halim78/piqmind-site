@@ -38,7 +38,7 @@
     for (let r = 0; r < rows; r++) {
       const row = document.createElement('div');
       row.className = 'book-row' + (r % 2 ? ' rev' : '');
-      row.style.setProperty('--dur', (120 + rnd() * 60).toFixed(0) + 's');
+      row.style.setProperty('--dur', (300 + rnd() * 120).toFixed(0) + 's');
       row.style.marginLeft = (-rnd() * bookW).toFixed(0) + 'px';
       const set = [];
       for (let i = 0; i < count; i++) set.push(makeBook());

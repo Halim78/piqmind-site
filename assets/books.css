@@ -2,7 +2,7 @@
 
 .landing { position: relative; }
 .landing .site-header, .landing main, .landing .site-footer { position: relative; z-index: 1; }
-.landing .site-header { background: rgba(14, 11, 24, 0.55); }
+.landing .site-header { background: transparent; border-bottom-color: transparent; backdrop-filter: none; -webkit-backdrop-filter: none; }
 .landing .site-footer { border-top-color: transparent; background: transparent; }
 .landing main { flex: 1; display: flex; align-items: center; justify-content: center; }
 .landing .hero { padding: 40px 0 60px; }
