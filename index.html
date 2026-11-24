@@ -2,228 +2,39 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>piqMind — L’essentiel d’un livre en 15 minutes</title>
 <meta name="description" content="piqMind, l’app iPhone pour lire et écouter les idées clés des meilleurs livres en 15 minutes.">
 <meta name="theme-color" content="#0E0B18">
-<meta property="og:title" content="piqMind — L’essentiel d’un livre en 15 minutes">
-<meta property="og:description" content="Lis ou écoute les grandes idées de plus de 200 livres, en 15 minutes chacun.">
-<meta property="og:image" content="https://piqmind.app/assets/apple-touch-icon.png">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="preload" href="assets/fonts/Satoshi-Black.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="stylesheet" href="assets/style.css">
-<link rel="stylesheet" href="assets/home.css">
+<link rel="stylesheet" href="assets/books.css">
 </head>
-<body class="home">
+<body class="landing">
+<div class="books" aria-hidden="true"></div>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="index.html"><img src="assets/logo.png" alt="" width="34" height="34">piqMind</a>
     <nav class="nav" aria-label="Menu">
-      <a class="hide-sm" href="#lire">Découvrir</a>
-      <a href="#offre">Premium</a>
+      <a href="index.html" aria-current="page">Accueil</a>
       <a href="support.html">Aide</a>
+      <a class="hide-sm" href="confidentialite.html">Confidentialité</a>
     </nav>
   </div>
 </header>
-
-<main>
-  <!-- Hero -->
-  <section class="hero2">
-    <span class="eyebrow reveal"><span class="dot"></span>Bientôt sur iPhone</span>
-    <h1 class="display reveal d1">Un livre.<br><span class="gold">15 minutes.</span></h1>
-    <p class="lead reveal d2">Les grandes idées des meilleurs livres, à lire ou à écouter. Retiens l’essentiel sans lire le livre en entier.</p>
-    <div class="btn-row reveal d3">
-      <a class="btn big" href="#offre">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.33 1.9-3.45 1.99-3.5-1.08-1.59-2.77-1.8-3.37-1.83-1.43-.15-2.8.84-3.53.84-.73 0-1.85-.82-3.04-.8-1.56.02-3 .91-3.81 2.31-1.62 2.82-.41 7 1.17 9.29.77 1.12 1.69 2.38 2.9 2.33 1.16-.05 1.6-.75 3.01-.75 1.4 0 1.8.75 3.03.73 1.25-.02 2.04-1.14 2.81-2.27.88-1.3 1.25-2.56 1.27-2.62-.03-.01-2.43-.93-2.43-3.73zM14.06 5.75c.64-.78 1.07-1.85.95-2.93-.92.04-2.04.61-2.7 1.39-.59.69-1.11 1.79-.97 2.85 1.03.08 2.070-.52 2.72-1.31z"/></svg>
-        Bientôt sur l’App Store
-      </a>
-      <a class="btn-ghost" href="#lire">Découvrir ↓</a>
-    </div>
-
-    <div class="stage reveal d2">
-      <img class="bee" src="assets/bee.png" alt="" width="150" height="150">
-      <div class="chip c1"><span class="ic">🎧</span><span>Écoute<small>texte surligné</small></span></div>
-      <div class="chip c2"><span class="ic">⏱️</span><span>15 min<small>par livre</small></span></div>
-      <div class="chip c3"><span class="ic">✈️</span><span>Hors ligne<small>métro, avion</small></span></div>
-      <div class="phone">
-        <div class="screen">
-          <div class="island"></div>
-          <div class="status"><span>9:41</span><span>●●● ▮</span></div>
-          <div class="app">
-            <div class="top"><span>✕</span><span>Idée 3 sur 7</span><span>Aa</span></div>
-            <div class="bar"><i></i></div>
-            <h4>Les petites habitudes battent les grands objectifs</h4>
-            <p>On croit qu’il faut une énorme motivation pour changer. En réalité, <mark>ce sont des gestes minuscules, répétés chaque jour,</mark> qui transforment une vie.</p>
-            <p>Améliore-toi de 1 % par jour : au bout d’un an, l’effet cumulé est spectaculaire.</p>
-            <span class="pill">💡 À retenir</span>
-            <div class="next">Idée suivante →</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Chiffres -->
-  <section class="numbers wrap reveal" aria-label="piqMind en chiffres">
-    <div><b class="gold">200+</b><span>livres résumés</span></div>
-    <div><b>15 min</b><span>par livre</span></div>
-    <div><b>19</b><span>thèmes</span></div>
-    <div><b>0</b><span>publicité</span></div>
-  </section>
-
-  <!-- Lire -->
-  <section class="feature wrap" id="lire">
-    <div class="copy reveal">
-      <span class="kicker">Lire</span>
-      <h2 class="display">Lis.</h2>
-      <p class="big">Chaque livre est découpé en quelques idées clés, écrites simplement. Une idée, un écran, et tu avances à ton rythme.</p>
-      <ul>
-        <li>Les idées essentielles, sans le remplissage</li>
-        <li>L’auteur présenté en quelques faits</li>
-        <li>Un nouveau livre du jour, chaque jour</li>
-      </ul>
-    </div>
-    <div class="visual reveal d2">
-      <div class="phone">
-        <div class="screen">
-          <div class="island"></div>
-          <div class="status"><span>9:41</span><span>●●● ▮</span></div>
-          <div class="app">
-            <div class="top"><span>‹</span><span>Livre du jour</span><span>♡</span></div>
-            <div class="streak" style="margin-top:22px">
-              <small style="color:var(--text-2);font-weight:700">Aujourd’hui</small>
-              <h4 style="margin-top:6px">L’art de dire non pour faire mieux</h4>
-              <p style="margin-top:8px">7 idées clés · 14 min</p>
-            </div>
-            <p><b style="color:#fff">Idée 1.</b> Tout n’est pas important. Choisir, c’est renoncer : <mark>dire non à beaucoup de choses</mark> permet de dire un vrai oui à l’essentiel.</p>
-            <p><b style="color:#fff">Idée 2.</b> Ton temps est limité. Protège-le comme ce que tu as de plus précieux.</p>
-            <div class="next">Commencer la lecture</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Écouter -->
-  <section class="feature listen flip wrap" id="ecouter">
-    <div class="copy reveal">
-      <span class="kicker">Écouter</span>
-      <h2 class="display gold">Écoute.</h2>
-      <p class="big">Les mains prises ? Lance l’écoute et suis le texte qui se surligne mot après mot. Parfait pour la marche, le sport ou les trajets.</p>
-      <ul>
-        <li>Le texte défile tout seul avec la voix</li>
-        <li>Livres téléchargés, même sans réseau</li>
-        <li>Continue là où tu t’étais arrêté</li>
-      </ul>
-    </div>
-    <div class="visual reveal d2">
-      <div class="phone">
-        <div class="screen">
-          <div class="island"></div>
-          <div class="status"><span>9:41</span><span>●●● ▮</span></div>
-          <div class="app">
-            <div class="top"><span>⌄</span><span>En écoute</span><span>⋯</span></div>
-            <div class="cover"><img src="assets/bee.png" alt=""></div>
-            <div class="karaoke" id="karaoke">Le cerveau oublie vite ce qu’il ne revoit pas. Revenir sur une idée au bon moment, c’est la graver pour longtemps.</div>
-            <div class="wave" aria-hidden="true"></div>
-            <div class="controls"><span>↺</span><span class="play">❚❚</span><span>↻</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Retenir -->
-  <section class="feature wrap" id="retenir">
-    <div class="copy reveal">
-      <span class="kicker">Retenir</span>
-      <h2 class="display">Retiens.</h2>
-      <p class="big">Lire, c’est bien. S’en souvenir, c’est mieux. piqMind t’aide à faire de la lecture une habitude, et à garder ce que tu as appris.</p>
-      <ul>
-        <li>Une série de jours qui motive à revenir</li>
-        <li>Des rappels doux, quand tu le choisis</li>
-        <li>Niveaux et récompenses au fil des livres</li>
-      </ul>
-    </div>
-    <div class="visual reveal d2">
-      <div class="phone">
-        <div class="screen">
-          <div class="island"></div>
-          <div class="status"><span>9:41</span><span>●●● ▮</span></div>
-          <div class="app">
-            <div class="top"><span>Ma progression</span><span>⚙︎</span></div>
-            <div class="streak">
-              <div style="display:flex;justify-content:space-between;align-items:center"><b>🔥 12</b><span style="color:var(--text-2);font-weight:700">jours d’affilée</span></div>
-              <div class="days">
-                <span>L<i class="ok"></i></span><span>M<i class="ok"></i></span><span>M<i class="ok"></i></span><span>J<i class="ok"></i></span><span>V<i class="ok"></i></span><span>S<i class="ok"></i></span><span>D<i></i></span>
-              </div>
-            </div>
-            <div class="daily"><span class="mini"></span><div><small>Livre du jour</small><div>Le pouvoir des petites victoires</div></div></div>
-            <div class="quiz">
-              <div>Combien de temps pour un livre ?</div>
-              <div class="good">✓ 15 minutes</div>
-              <div>2 heures</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Manifeste -->
-  <section class="manifesto">
-    <p class="reveal">Tu n’as pas le temps de lire <b>50 livres par an</b>. Mais tu as <b>15 minutes</b>. Et 15 minutes suffisent pour <b>changer ta façon de penser.</b></p>
-  </section>
-
-  <!-- Thèmes -->
-  <section class="topics">
-    <div class="wrap">
-      <h2 class="display reveal">Tous les sujets<br>qui comptent.</h2>
-      <p class="sub reveal d1">Psychologie, argent, histoire, santé… 19 thèmes pour nourrir ta curiosité.</p>
-    </div>
-    <div class="marquee" aria-label="Thèmes du catalogue">
-      <div class="track">
-        <span class="tag y">Psychologie</span><span class="tag">Productivité</span><span class="tag c">Carrière et réussite</span><span class="tag">Politique</span><span class="tag l">Philosophie</span><span class="tag">Développement personnel</span><span class="tag y">Communication</span><span class="tag">Nature et environnement</span><span class="tag c">Santé et bien-être</span><span class="tag">Motivation</span>
-        <span class="tag y" aria-hidden="true">Psychologie</span><span class="tag" aria-hidden="true">Productivité</span><span class="tag c" aria-hidden="true">Carrière et réussite</span><span class="tag" aria-hidden="true">Politique</span><span class="tag l" aria-hidden="true">Philosophie</span><span class="tag" aria-hidden="true">Développement personnel</span><span class="tag y" aria-hidden="true">Communication</span><span class="tag" aria-hidden="true">Nature et environnement</span><span class="tag c" aria-hidden="true">Santé et bien-être</span><span class="tag" aria-hidden="true">Motivation</span>
-      </div>
-      <div class="track rev">
-        <span class="tag">Entrepreneuriat</span><span class="tag l">Biographies</span><span class="tag">Fiction</span><span class="tag c">Économie</span><span class="tag">Spiritualité</span><span class="tag y">Éducation</span><span class="tag">Parentalité</span><span class="tag l">Histoire</span><span class="tag">Argent et investissement</span>
-        <span class="tag" aria-hidden="true">Entrepreneuriat</span><span class="tag l" aria-hidden="true">Biographies</span><span class="tag" aria-hidden="true">Fiction</span><span class="tag c" aria-hidden="true">Économie</span><span class="tag" aria-hidden="true">Spiritualité</span><span class="tag y" aria-hidden="true">Éducation</span><span class="tag" aria-hidden="true">Parentalité</span><span class="tag l" aria-hidden="true">Histoire</span><span class="tag" aria-hidden="true">Argent et investissement</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Étapes -->
-  <section class="steps wrap">
-    <h2 class="display reveal">Simple comme<br><span class="gold">1, 2, 3.</span></h2>
-    <ol>
-      <li class="reveal"><b class="gold">01</b><h3>Choisis</h3><p>Dis-nous ce qui t’intéresse : piqMind te propose les livres faits pour toi.</p></li>
-      <li class="reveal d1"><b class="gold">02</b><h3>Lis ou écoute</h3><p>15 minutes, quelques idées clés, au calme ou dans le métro.</p></li>
-      <li class="reveal d2"><b class="gold">03</b><h3>Retiens</h3><p>Ta série, tes rappels et tes niveaux t’aident à garder l’habitude.</p></li>
-    </ol>
-  </section>
-
-  <!-- Offre -->
-  <section class="offer wrap" id="offre">
-    <div class="offer-card reveal">
-      <span class="eyebrow"><span class="dot"></span>piqMind Premium</span>
-      <h2 class="display" style="margin-top:22px">Tout piqMind.<br>Sans limite.</h2>
-      <div class="price-big">79,99 € <small>/ an</small></div>
-      <div class="trial">7 jours d’essai gratuit</div>
-      <div class="perks"><span>Plus de 200 livres</span><span>Nouveautés en avant-première</span><span>Lecture et écoute hors ligne</span><span>Résiliable à tout moment</span></div>
-      <div class="btn-row"><a class="btn big" href="#offre">Bientôt sur l’App Store</a></div>
-      <p class="fine">Une partie des livres reste gratuite, sans abonnement. Renouvellement automatique, résiliable dans Réglages &gt; Abonnements. <a href="conditions.html">Conditions</a></p>
-    </div>
-  </section>
-
-  <!-- Fin -->
-  <section class="finale">
-    <img class="reveal" src="assets/bee.png" alt="" width="120" height="120">
-    <h2 class="display reveal d1">Lis plus.<br><span class="gold">Retiens mieux.</span></h2>
+<main class="wrap">
+  <section class="hero">
+    <img class="logo" src="assets/logo.png" alt="Logo piqMind" width="112" height="112">
+    <h1>L’essentiel d’un livre<br><em>en 15 minutes.</em></h1>
+    <p class="lead">piqMind résume les grandes idées des meilleurs livres de développement personnel, d’argent, de psychologie et d’histoire. Tu lis ou tu écoutes, et tu retiens l’essentiel sans lire le livre en entier.</p>
+    <a class="btn" href="#" aria-disabled="true">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.33 1.9-3.45 1.99-3.5-1.08-1.59-2.77-1.8-3.37-1.83-1.43-.15-2.8.84-3.53.84-.73 0-1.85-.82-3.04-.8-1.56.02-3 .91-3.81 2.31-1.62 2.82-.41 7 1.17 9.29.77 1.12 1.69 2.38 2.9 2.33 1.16-.05 1.6-.75 3.01-.75 1.4 0 1.8.75 3.03.73 1.25-.02 2.04-1.14 2.81-2.27.88-1.3 1.25-2.56 1.27-2.62-.03-.01-2.43-.93-2.43-3.73zM14.06 5.75c.64-.78 1.07-1.85.95-2.93-.92.04-2.04.61-2.7 1.39-.59.69-1.11 1.79-.97 2.85 1.03.08 2.07-.52 2.72-1.31z"/></svg>
+      Bientôt sur l’App Store
+    </a>
+    <span class="soon">Disponible sur iPhone</span>
   </section>
 </main>
-
 <footer class="site-footer">
   <div class="wrap">
     <span>© 2026 piqMind</span>
@@ -234,35 +45,6 @@
     </nav>
   </div>
 </footer>
-
-<script>
-  // En-tête plus opaque après le haut de page
-  const header = document.querySelector('.site-header');
-  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 40);
-  addEventListener('scroll', onScroll, { passive: true }); onScroll();
-
-  // Apparition des blocs au défilement
-  const io = 'IntersectionObserver' in window ? new IntersectionObserver((entries) => {
-    entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }) : null;
-  document.querySelectorAll('.reveal').forEach((el) => io ? io.observe(el) : el.classList.add('in'));
-
-  // Onde sonore
-  const wave = document.querySelector('.wave');
-  for (let i = 0; i < 28; i++) { const b = document.createElement('i'); b.style.animationDelay = (-(i * 0.13) % 1.2).toFixed(2) + 's'; wave.appendChild(b); }
-
-  // Mot surligné qui avance, comme dans l'app
-  const k = document.getElementById('karaoke');
-  const words = k.textContent.trim().split(/\s+/);
-  k.innerHTML = words.map((w) => '<span>' + w + '</span>').join(' ');
-  const spans = k.querySelectorAll('span');
-  const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let n = still ? 6 : 0;
-  const tick = () => {
-    spans.forEach((s, i) => { s.classList.toggle('on', i === n); s.classList.toggle('past', i < n); });
-    n = (n + 1) % (spans.length + 4);
-  };
-  tick(); if (!still) setInterval(tick, 380);
-</script>
+<script src="assets/books.js" defer></script>
 </body>
 </html>
