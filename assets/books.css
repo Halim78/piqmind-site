@@ -19,8 +19,8 @@
   justify-content: center;
   gap: var(--gap);
   opacity: 0.38;
-  --gap: 1.1vw;
-  --w: calc((100vw - 19 * var(--gap)) / 20);   /* environ 20 livres par ligne */
+  --gap: 1.6vw;
+  --w: calc((100vw - 9 * var(--gap)) / 10);   /* environ 10 livres par ligne */
 }
 /* Voile : plus sombre au centre pour que le texte reste bien lisible. */
 .books::after {
@@ -36,7 +36,7 @@
   display: flex;
   gap: var(--gap);
   width: max-content;
-  filter: blur(8px);
+  filter: blur(12px);
   will-change: transform;
   animation: drift var(--dur, 140s) linear infinite;
 }
@@ -72,8 +72,8 @@
 @keyframes drift { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
 @media (max-width: 760px) {
-  .books { --gap: 2.2vw; --w: calc((100vw - 9 * var(--gap)) / 10); opacity: 0.32; }
-  .book-row { filter: blur(6px); }
+  .books { --gap: 3vw; --w: calc((100vw - 4 * var(--gap)) / 5); opacity: 0.32; }
+  .book-row { filter: blur(9px); }
 }
 @media (prefers-reduced-motion: reduce) {
   .book-row { animation: none; }

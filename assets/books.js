@@ -28,7 +28,7 @@
   function build() {
     wall.textContent = '';
     const style = getComputedStyle(wall);
-    const perRow = innerWidth <= 760 ? 10 : 20;
+    const perRow = innerWidth <= 760 ? 5 : 10;
     const gap = parseFloat(style.rowGap) || 12;
     const bookW = (innerWidth - (perRow - 1) * gap) / perRow;
     const bookH = bookW * 1.5;
